@@ -1,3 +1,4 @@
+/* declare values for colors etc */
 :root {
     --clr-wrapper: rgba(60, 50, 70, 10);
     --clr-wrapper-blur: rgba(80, 70, 90, 10);
@@ -5,28 +6,47 @@
 }
 
 body {
+    /* use flex for display */
     display: flex;
-    justify-content: center;
+    /* set the background color to our ^ value */
     background-color: var(--clr-wrapper);
-    font-size: 21px;
-    padding: 5vh;
 }
 
+/* wrapper used for containing the main buttons */
 .wrapper {
-    width: 50vw;
+    /* declare width and height */
+    width: 25vw;
     height: 75vh;
+    /* declare the display and direction */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* declare the background and border radius(shape corners) */
     background-color: white;
-    border-radius: 5%;
+    border-radius: 2em;
+    /* give an underglow effect */
     box-shadow: 0 0 5vw 5vh var(--clr-wrapper-blur);
+    /* make it's margins auto so it goes in the center */
+    margin: auto;
 }
 
+/* main buttons on the page */
 .button {
-    width: 75%;
-    height: 25%;
-    margin: 1em;
+    /* declare the width and height in procedural values */
+    width: 50%;
+    height: 10%;
+
+    /* center the content with procedural margins */
+    margin: auto;
     background-color: var(--clr-buttons);
+    border-radius: 0.5em;
+
+    position: relative;
+}
+
+/* inside parts of the buttons(they animate) */
+.button::after {
+    position: absolute;
+    width: 90em;
+    height: 90em;
+    background-color: black;
 }
