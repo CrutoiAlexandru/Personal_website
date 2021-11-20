@@ -1,0 +1,32 @@
+:root {
+    --clr-wrapper: rgba(60, 50, 70, 10);
+    --clr-wrapper-blur: rgba(80, 70, 90, 10);
+    --clr-buttons: grey;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--clr-wrapper);
+    font-size: 21px;
+    padding: 5vh;
+}
+
+.wrapper {
+    width: 50vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 0 0 5vw 5vh var(--clr-wrapper-blur);
+}
+
+.button {
+    width: 75%;
+    height: 25%;
+    margin: 1em;
+    background-color: var(--clr-buttons);
+}
