@@ -30,23 +30,46 @@ body {
 }
 
 /* main buttons on the page */
-.button {
+.button_background {
     /* declare the width and height in procedural values */
     width: 50%;
     height: 10%;
-
     /* center the content with procedural margins */
     margin: auto;
     background-color: var(--clr-buttons);
+    /* corner shape */
     border-radius: 0.5em;
+    /* flex display */
+    display: flex;
+}
 
-    position: relative;
+.button_background:hover {
+    /* move the content up when hovering */
+    transform: translateY(-20%);
+    transition-duration: 100ms;
 }
 
 /* inside parts of the buttons(they animate) */
-.button::after {
-    position: absolute;
-    width: 90em;
-    height: 90em;
-    background-color: black;
+.button {
+    /* use flex display */
+    display: flex;
+    /* declare width and height */
+    width: 100%;
+    height: 100%;
+    /* corner shape */
+    border-radius: 0.5em;
+    /* center items */
+    justify-content: center;
+    align-items: center;
+    /* bold text and text color */
+    font-weight: 900;
+    color: white;
+
+    background-color: red;
+}
+
+.button:hover {
+    /* move the content down when hovering */
+    transform: translateY(40%);
+    transition-duration: 100ms;
 }
