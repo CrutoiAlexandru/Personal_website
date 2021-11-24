@@ -1,75 +1,40 @@
 /* declare values for colors etc */
 :root {
-    --clr-wrapper: rgba(60, 50, 70, 10);
-    --clr-wrapper-blur: rgba(80, 70, 90, 10);
-    --clr-buttons: grey;
+    --clr-text: #fff;
+    --clr-background: #000;
 }
 
 body {
-    /* use flex for display */
-    display: flex;
-    /* set the background color to our ^ value */
-    background-color: var(--clr-wrapper);
+    margin: 0;
 }
 
-/* wrapper used for containing the main buttons */
-.wrapper {
-    /* declare width and height */
-    width: 25vw;
-    height: 75vh;
-    /* declare the display and direction */
-    display: flex;
-    flex-direction: column;
-    /* declare the background and border radius(shape corners) */
-    background-color: white;
-    border-radius: 2em;
-    /* give an underglow effect */
-    box-shadow: 0 0 5vw 5vh var(--clr-wrapper-blur);
-    /* make it's margins auto so it goes in the center */
-    margin: auto;
+.header {
+    text-align: center;
 }
 
-/* main buttons on the page */
-.button_background {
-    /* declare the width and height in procedural values */
-    width: 50%;
-    height: 10%;
-    /* center the content with procedural margins */
-    margin: auto;
-    background-color: var(--clr-buttons);
-    /* corner shape */
-    border-radius: 0.5em;
-    /* flex display */
-    display: flex;
-}
-
-.button_background:hover {
-    /* move the content up when hovering */
-    transform: translateY(-20%);
-    transition-duration: 100ms;
-}
-
-/* inside parts of the buttons(they animate) */
-.button {
-    /* use flex display */
-    display: flex;
-    /* declare width and height */
+.content {
+    position: absolute;
     width: 100%;
     height: 100%;
-    /* corner shape */
-    border-radius: 0.5em;
-    /* center items */
+    background-color: var(--clr-background);
+
+    display: flex;
     justify-content: center;
     align-items: center;
-    /* bold text and text color */
-    font-weight: 900;
-    color: white;
 
-    background-color: red;
+    transform-style: preserve-3d;
+    overflow: hidden;
 }
 
-.button:hover {
-    /* move the content down when hovering */
-    transform: translateY(40%);
-    transition-duration: 100ms;
+.spiner {
+    height: 25%;
+    aspect-ratio: 1;
+
+    transform: perspective(25em) translate3d(0em, 0em, 0em) rotateY(0deg);
+    background-color: var(--clr-text);
+}
+
+.content:hover .spiner {
+    transform: perspective(25em) translate3d(-10em, 0em, -10em) rotateY(-20deg);
+    transition: all ease 1200ms;
 }
