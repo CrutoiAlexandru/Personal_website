@@ -28,7 +28,7 @@ body {
     overflow: hidden;
 }
 
-.spiner__card--about_me {
+.spinner__card--about_me {
     position: absolute;
 
     height: 25%;
@@ -39,15 +39,15 @@ body {
     transition: all ease 3s;
 }
 
-.content:hover .spiner__card--about_me {
+.content:hover .spinner__card--about_me {
     transform: perspective(var(--perspective)) rotateY(360deg) translateZ(var(--z-translate));
 }
 
-.spiner__card--about_me p {
+.spinner__card--about_me p {
     color: black;
 }
 
-.spiner__card--2 {
+.spinner__card--2 {
     position: absolute;
 
     height: 25%;
@@ -58,10 +58,10 @@ body {
     transition: all ease 3s;
 }
 
-.content:hover .spiner__card--2 {
+.content:hover .spinner__card--2 {
     transform: perspective(var(--perspective)) rotateY(540deg) translateZ(var(--z-translate));
 }
 
-.spiner__card--2 p {
+.spinner__card--2 p {
     color: black;
 }
