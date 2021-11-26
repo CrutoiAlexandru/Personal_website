@@ -2,31 +2,47 @@
 :root {
     --clr-text: #fff;
     --clr-background: #000;
-    --z-translate: 30em;
-    --perspective: 60em;
+    --z-translate: 40em;
+    --perspective: 80em;
+    --mouse-add-angle: 0deg;
 }
 
 body {
     margin: 0;
+    perspective: var(--perspective);
+
+    perspective-origin: 50% calc(50% - 22em);
 }
 
 .header {
     text-align: center;
 }
 
-.content {
+/* card conainer */
+
+.spinner {
     position: relative;
     width: 100%;
     height: 100vh;
     background-color: var(--clr-background);
 
     display: flex;
+    transform-style: preserve-3d;
+
     justify-content: center;
     align-items: center;
 
-    transform-style: preserve-3d;
     overflow: hidden;
 }
+
+.spinner>* {
+    text-align: center;
+    font-weight: 700;
+
+    transition-duration: 200ms;
+}
+
+/* about me card */
 
 .spinner__card--about_me {
     position: absolute;
@@ -35,33 +51,29 @@ body {
     aspect-ratio: 1;
     background-color: var(--clr-text);
 
-    transform: perspective(var(--perspective)) rotateY(0deg) translateZ(var(--z-translate));
-    transition: all ease 3s;
+    transform: rotateY(var(--mouse-add-angle)) translateY(-5em) translateZ(var(--z-translate));
 }
 
-.content:hover .spinner__card--about_me {
-    transform: perspective(var(--perspective)) rotateY(360deg) translateZ(var(--z-translate));
-}
+/* my code card */
 
-.spinner__card--about_me p {
-    color: black;
-}
-
-.spinner__card--2 {
+.spinner__card--my_code {
     position: absolute;
 
     height: 25%;
     aspect-ratio: 1;
-    background-color: var(--clr-text);
+    background-color: red;
 
-    transform: perspective(var(--perspective)) rotateY(180deg) translateZ(var(--z-translate));
-    transition: all ease 3s;
+    transform: rotateY(calc(calc(360deg/3) + var(--mouse-add-angle))) translateY(-5em) translateZ(var(--z-translate));
 }
 
-.content:hover .spinner__card--2 {
-    transform: perspective(var(--perspective)) rotateY(540deg) translateZ(var(--z-translate));
-}
+/* about me card */
 
-.spinner__card--2 p {
-    color: black;
+.spinner__card--contact_me {
+    position: absolute;
+
+    height: 25%;
+    aspect-ratio: 1;
+    background-color: blue;
+
+    transform: rotateY(calc(calc(360deg*2/3) + var(--mouse-add-angle))) translateY(-5em) translateZ(var(--z-translate));
 }
