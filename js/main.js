@@ -1,3 +1,62 @@
+// add header animation
+var header = document.querySelector(".page_name_h1");
+
+header_length = header.innerHTML.length;
+
+header_array = header.innerHTML.split("");
+fake_header_array = header_array;
+
+header.innerHTML = null;
+
+var timer = setInterval(onTick, 50);
+var index = 0;
+var sec_header = "empty";
+var sec_index = 0;
+var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+var charactersLength = characters.length;
+var it_number = 5;
+
+function onTick() {
+    for (var i = 0; i <= index; i++) {
+        sec_header += header_array[i];
+    }
+
+    if (sec_index % 2) {
+        sec_header += '|';
+    }
+
+    for (var i = index; i < header_length; i++) {
+        sec_header += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+    console.log(sec_header.replace("empty", ""));
+
+    if (index < header_length - 1) {
+        if (sec_index < it_number) {
+            if (sec_index % 2) {
+                header.innerHTML = sec_header.replace("empty", "");
+            } else {
+                header.innerHTML = sec_header.replace("empty", "");
+            }
+        }
+    } else {
+        header.innerHTML = "Crutoi Alexandru's home";
+    }
+
+    if (sec_index < it_number) {
+        sec_index++;
+    } else {
+        sec_index = 0;
+        index++;
+    }
+
+    sec_header = "empty";
+    if (index === header_length) {
+        clearInterval(timer);
+        return;
+    }
+}
+
 // Get the root element
 var r = document.querySelector(':root');
 

@@ -4,6 +4,7 @@
     --clr-background: #000;
     --clr-spinner-cards: rgba(255, 255, 255, 1);
     --clr-spinner-cards-shadow: rgba(255, 255, 255, 0.25);
+    --clr-spinner-cards-backdrop: rgba(50, 50, 50, 0.5);
     --z-translate: 40em;
     --perspective: 80em;
     --mouse-add-angle: 0deg;
@@ -60,10 +61,6 @@ body {
     background-color: black;
 }
 
-.spinner__card--about_me::after {
-    content: 'Quick description about me';
-}
-
 /* about me card */
 
 .spinner__card--about_me {
@@ -73,7 +70,27 @@ body {
     aspect-ratio: 1;
     background-color: var(--clr-spinner-cards);
 
+    transform-style: preserve-3d;
+
     transform: rotateY(var(--mouse-add-angle)) translateY(-5em) translateZ(var(--z-translate));
+}
+
+.spinner__card--about_me::after {
+    content: 'Quick description about me';
+}
+
+/* temporary backdrop for cars, maybe make the cubes in the future */
+.spinner__card--about_me::before {
+    content: '';
+    position: absolute;
+    height: 105%;
+    width: 105%;
+
+    border-radius: 2em;
+
+    transform: translate3d(-50%, -2.5%, -1em);
+
+    background-color: var(--clr-spinner-cards-backdrop);
 }
 
 /* my code card */
@@ -85,7 +102,23 @@ body {
     aspect-ratio: 1;
     background-color: var(--clr-spinner-cards);
 
+    transform-style: preserve-3d;
+
     transform: rotateY(calc(calc(360deg/3) + var(--mouse-add-angle))) translateY(-5em) translateZ(var(--z-translate));
+}
+
+/* temporary backdrop for cars, maybe make the cubes in the future */
+.spinner__card--my_code::before {
+    content: '';
+    position: absolute;
+    height: 105%;
+    width: 105%;
+
+    border-radius: 2em;
+
+    transform: translate3d(-50%, -2.5%, -1em);
+
+    background-color: var(--clr-spinner-cards-backdrop);
 }
 
 /* about me card */
@@ -97,5 +130,21 @@ body {
     aspect-ratio: 1;
     background-color: var(--clr-spinner-cards);
 
+    transform-style: preserve-3d;
+
     transform: rotateY(calc(calc(360deg*2/3) + var(--mouse-add-angle))) translateY(-5em) translateZ(var(--z-translate));
+}
+
+/* temporary backdrop for cars, maybe make the cubes in the future */
+.spinner__card--contact_me::before {
+    content: '';
+    position: absolute;
+    height: 105%;
+    width: 105%;
+
+    border-radius: 2em;
+
+    transform: translate3d(-50%, -2.5%, -1em);
+
+    background-color: var(--clr-spinner-cards-backdrop);
 }
