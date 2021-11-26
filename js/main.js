@@ -1,6 +1,7 @@
 // Get the root element
 var r = document.querySelector(':root');
 
+// do a drag animation for the spinner cards
 var container = document.querySelector(".spinner");
 
 var active = false;
@@ -51,3 +52,51 @@ function drag(e) {
         r.style.setProperty('--mouse-add-angle', currentX / 5 + 'deg');
     }
 }
+
+// onclick function for the about me card
+var about_me_button = document.querySelector(".spinner__card--about_me");
+
+about_me_button.addEventListener("click", function() {
+    document.body.style.cursor = "wait";
+    window.location = "https://google.com";
+});
+
+about_me_button.addEventListener("mouseover", event => {
+    document.body.style.cursor = "pointer";
+});
+
+about_me_button.addEventListener("mouseout", event => {
+    document.body.style.cursor = "default";
+});
+
+// onclick function for the my code card
+var my_code_button = document.querySelector(".spinner__card--my_code");
+
+my_code_button.addEventListener("click", function() {
+    document.body.style.cursor = "wait";
+    window.location = "https://github.com/CrutoiAlexandru";
+});
+
+my_code_button.addEventListener("mouseover", event => {
+    document.body.style.cursor = "pointer";
+});
+
+my_code_button.addEventListener("mouseout", event => {
+    document.body.style.cursor = "default";
+});
+
+// onclick function for the about me card
+var contact_me_button = document.querySelector(".spinner__card--contact_me");
+
+contact_me_button.addEventListener("click", function() {
+    document.body.style.cursor = "wait";
+    window.location = "https://google.com";
+});
+
+contact_me_button.addEventListener("mouseover", event => {
+    document.body.style.cursor = "pointer";
+});
+
+contact_me_button.addEventListener("mouseout", event => {
+    document.body.style.cursor = "default";
+});

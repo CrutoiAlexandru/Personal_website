@@ -2,6 +2,8 @@
 :root {
     --clr-text: #fff;
     --clr-background: #000;
+    --clr-spinner-cards: rgba(255, 255, 255, 1);
+    --clr-spinner-cards-shadow: rgba(255, 255, 255, 0.25);
     --z-translate: 40em;
     --perspective: 80em;
     --mouse-add-angle: 0deg;
@@ -35,11 +37,31 @@ body {
     overflow: hidden;
 }
 
+/* card children */
+
 .spinner>* {
     text-align: center;
     font-weight: 700;
 
+    border-radius: 2em;
+    box-shadow: 0 0 5em 0.1em var(--clr-spinner-cards-shadow);
+
     transition-duration: 200ms;
+}
+
+.spinner>*::after {
+    content: '';
+    position: absolute;
+    height: 1%;
+    width: 100%;
+
+    transform: translate(-50%, 0%);
+
+    background-color: black;
+}
+
+.spinner__card--about_me::after {
+    content: 'Quick description about me';
 }
 
 /* about me card */
@@ -49,7 +71,7 @@ body {
 
     height: 25%;
     aspect-ratio: 1;
-    background-color: var(--clr-text);
+    background-color: var(--clr-spinner-cards);
 
     transform: rotateY(var(--mouse-add-angle)) translateY(-5em) translateZ(var(--z-translate));
 }
@@ -61,7 +83,7 @@ body {
 
     height: 25%;
     aspect-ratio: 1;
-    background-color: red;
+    background-color: var(--clr-spinner-cards);
 
     transform: rotateY(calc(calc(360deg/3) + var(--mouse-add-angle))) translateY(-5em) translateZ(var(--z-translate));
 }
@@ -73,7 +95,7 @@ body {
 
     height: 25%;
     aspect-ratio: 1;
-    background-color: blue;
+    background-color: var(--clr-spinner-cards);
 
     transform: rotateY(calc(calc(360deg*2/3) + var(--mouse-add-angle))) translateY(-5em) translateZ(var(--z-translate));
 }
