@@ -29,8 +29,6 @@ function onTick() {
         sec_header += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
 
-    console.log(sec_header.replace("empty", ""));
-
     if (index < header_length - 1) {
         if (sec_index < it_number) {
             if (sec_index % 2) {
