@@ -157,3 +157,6 @@ contact_me_button.addEventListener("mouseover", event => {
 contact_me_button.addEventListener("mouseout", event => {
     document.body.style.cursor = "default";
 });
+
+// z-index = -1 for elements behind the y axis(negative nr)
+// var y_about_me = about_me_button.getBoundingClientRect();
