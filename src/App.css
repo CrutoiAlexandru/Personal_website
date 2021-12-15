@@ -1,0 +1,40 @@
+
+.title-bar {
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid;
+}
+
+.cards-wrapper {
+    margin-top: 5%;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cards-wrapper>*{
+    display: flex;
+    background-color: white;
+
+    width: 100%;
+    aspect-ratio: 1;
+    margin: 5%;
+    border-radius: 5%;
+
+    border: solid;
+
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .cards-wrapper {
+        width: 90%;
+        flex-direction: column;
+    }
+}
+
+.cards-wrapper>*:hover {
+    background-color: aliceblue;
+}
