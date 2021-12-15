@@ -1,15 +1,15 @@
-.title-bar__about-me {
+.title-bar__contact-me {
     color: black;
     display: flex;
     justify-content: space-around;
     border-bottom: 1px solid;
 }
 
-.title-bar__about-me:hover {
+.title-bar__contact-me:hover {
     color: tomato;
 }
 
-.title-bar__about-me>* {
+.title-bar__contact-me>* {
     animation-name: title-slide;
     animation-duration: 2s;
 }
@@ -19,23 +19,21 @@
     to {transform: translateY(0%);}
 }
 
-.cards-wrapper__about-me {
+.cards-wrapper__contact-me {
     margin-top: 5%;
     color: black;
     display: flex;
     justify-content: space-around;
 }
 
-.cards-wrapper__about-me>* {
+.cards-wrapper__contact-me>* {
     display: flex;
     background-color: white;
     color: black;
 
     width: 100%;
-    height: fit-content;
-    margin: 2%;
-    padding: 1%;
-    word-break: break-word;
+    aspect-ratio: 1;
+    margin: 5%;
     border-radius: 1em;
 
     border: solid;
@@ -48,7 +46,7 @@
 }
 
 @keyframes cards-slide-desktop {
-    from {transform: translateX(-100%);}
+    from {transform: translateX(-425%);}
     to {transform: translateX(0%);}
 }
 
@@ -58,18 +56,18 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .cards-wrapper__about-me {
-    flex-direction: column;
+    .cards-wrapper__contact-me {
+        flex-direction: column;
     }
 
-    .cards-wrapper__about-me>* {
-        width: fit-content;
-        height: fit-content;
+    .cards-wrapper__contact-me>*{
+        width: 90%;
+        height: 20vh;
         animation-name: cards-slide-media;
     }
 }
 
-.cards-wrapper__about-me>*:hover {
+.cards-wrapper__contact-me>*:hover {
     background-color: tomato;
     cursor: pointer;
 }
