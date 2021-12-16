@@ -1,0 +1,38 @@
+:root {
+    --right-place: ;
+}
+
+body {
+    margin: 0;
+}
+
+.blobs--right-wrapper {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    margin: 0em;
+    padding: 0em;
+    z-index: 1;
+
+    overflow: hidden;
+}
+
+.blobs--right{
+    margin-left: auto;
+    margin-right: 0;
+    background-color: red;
+
+    animation-name: blobs--right-animation;
+    animation-duration: 2s;
+}
+
+@keyframes blobs--right-animation {
+    from {transform: translateX(100%);}
+    to {transform: translateX(var(--right-place));}
+}

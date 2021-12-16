@@ -3,10 +3,13 @@ import "./css/Home.css"
 import React from 'react'
 import { Link } from "react-router-dom";
 
+import Svg from "./../Svg.js"
+
 export default function Home() {
 
     return (
         <>
+        <Svg></Svg>
         <div className="title-bar">
           <h1 >Crutoi's website</h1>
         </div>
