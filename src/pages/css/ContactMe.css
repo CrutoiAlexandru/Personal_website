@@ -32,7 +32,7 @@
     color: black;
 
     width: 100%;
-    aspect-ratio: 1;
+    height: 5vh;
     margin: 5%;
     border-radius: 1em;
 
@@ -43,6 +43,10 @@
 
     animation-name: cards-slide-desktop;
     animation-duration: 2s;
+}
+
+.cards-wrapper__contact-me>*>* {
+    color: black;
 }
 
 @keyframes cards-slide-desktop {
@@ -62,7 +66,6 @@
 
     .cards-wrapper__contact-me>*{
         width: 90%;
-        height: 20vh;
         animation-name: cards-slide-media;
     }
 }
