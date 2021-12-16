@@ -3,6 +3,8 @@
     display: flex;
     justify-content: space-around;
     border-bottom: 1px solid;
+
+    font-family: 'Lobster', cursive;
 }
 
 .title-bar__about-me:hover {
@@ -24,6 +26,8 @@
     color: black;
     display: flex;
     justify-content: space-around;
+
+    font-family: 'Fuzzy Bubbles', cursive;
 }
 
 .cards-wrapper__about-me>* {
