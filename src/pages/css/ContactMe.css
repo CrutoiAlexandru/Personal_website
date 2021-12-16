@@ -30,6 +30,10 @@
     font-family: 'Fuzzy Bubbles', cursive;
 }
 
+a {  
+    text-decoration:none;  
+} 
+
 .cards-wrapper__contact-me>* {
     display: flex;
     background-color: white;
