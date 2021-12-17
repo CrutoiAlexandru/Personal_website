@@ -1,0 +1,80 @@
+:root {
+    --right-place: ;
+    --right-place-start: ;
+    --left-place: ;
+    --left-place-start: ;
+}
+
+body {
+    margin: 0;
+}
+
+.blobs--right-wrapper {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    margin: 0em;
+    padding: 0em;
+    z-index: -1;
+
+    overflow: hidden;
+}
+
+.blobs--right{
+    margin-left: auto;
+    margin-right: 0;
+
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    transform: translateX(var(--right-place));
+
+    animation-name: blobs--right-animation;
+    animation-duration: 2s;
+}
+
+@keyframes blobs--right-animation {
+    from {transform: translateX(var(--right-place-start));}
+    to {transform: translateX(var(--right-place));}
+}
+
+.blobs--left-wrapper {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    margin: 0em;
+    padding: 0em;
+    z-index: -1;
+
+    overflow: hidden;
+}
+
+.blobs--left{
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    transform: translateX(var(--left-place));
+
+    animation: blobs--left-animation 2s;
+}
+
+@keyframes blobs--left-animation {
+    from {transform: translateX(var(--left-place-start));}
+    to {transform: translateX(var(--left-place));}
+}
+
+@keyframes loop {
+    0% {transform: translateX(calc(var(--left-place)));}
+}

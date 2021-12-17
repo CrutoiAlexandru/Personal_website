@@ -3,13 +3,17 @@ import "./css/Home.css"
 import React from 'react'
 import { Link } from "react-router-dom";
 
-import Svg from "./../Svg.js"
+import Col1 from "./background_anim/Col1.js"
+import Col2 from "./background_anim/Col2.js"
+import Col3 from "./background_anim/Col3.js"
 
 export default function Home() {
 
     return (
         <>
-        <Svg></Svg>
+        <Col1></Col1>
+        <Col2></Col2>
+        <Col3></Col3>
         <div className="title-bar">
           <h1 >Crutoi's website</h1>
         </div>

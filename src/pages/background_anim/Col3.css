@@ -1,0 +1,77 @@
+:root {
+    --right-place-3: ;
+    --right-place-start-3: ;
+    --left-place-3: ;
+    --left-place-start-3: ;
+}
+
+body {
+    margin: 0;
+}
+
+.blobs--right-wrapper {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    margin: 0em;
+    padding: 0em;
+    z-index: -1;
+
+    overflow: hidden;
+}
+
+.blobs--right-3{
+    margin-left: auto;
+    margin-right: 0;
+
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    transform: translateX(var(--right-place-3));
+
+    animation-name: blobs--right-animation-3;
+    animation-duration: 2s;
+}
+
+@keyframes blobs--right-animation-3 {
+    from {transform: translateX(var(--right-place-start-3));}
+    to {transform: translateX(var(--right-place-3));}
+}
+
+.blobs--left-wrapper {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    margin: 0em;
+    padding: 0em;
+    z-index: -1;
+
+    overflow: hidden;
+}
+
+.blobs--left-3{
+    aspect-ratio: 1;
+    border-radius: 50%;
+    
+    transform: translateX(var(--left-place-3));
+
+    animation-name: blobs--left-animation-3;
+    animation-duration: 2s;
+}
+
+@keyframes blobs--left-animation-3 {
+    from {transform: translateX(var(--left-place-start-3));}
+    to {transform: translateX(var(--left-place-3));}
+}
