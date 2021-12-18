@@ -5,10 +5,23 @@
     border-bottom: 1px solid;
 
     font-family: 'Lobster', cursive;
+
+    transition: 200ms ease;
+}
+
+.title-bar__about-me>h1 {
+    transition: 200ms ease;
 }
 
 .title-bar__about-me:hover {
-    color: tomato;
+    color: var(--background-color);
+    /* background: var(--background-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.title-bar__about-me:hover>h1 {
+    scale: 1.1;
 }
 
 .title-bar__about-me>* {
@@ -36,7 +49,7 @@ a {
 
 .cards-wrapper__about-me>* {
     display: flex;
-    background-color: white;
+    background-color: var(--background-color--original);
     color: black;
 
     width: 100%;
@@ -53,6 +66,8 @@ a {
 
     animation-name: cards-slide-desktop;
     animation-duration: 2s;
+
+    transition: 200ms ease;
 }
 
 @keyframes cards-slide-desktop {
@@ -78,6 +93,7 @@ a {
 }
 
 .cards-wrapper__about-me>*:hover {
-    background-color: tomato;
+    scale: 1.025;
+    background: var(--background-color);
     cursor: pointer;
 }

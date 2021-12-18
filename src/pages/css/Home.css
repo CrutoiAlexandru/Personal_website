@@ -1,3 +1,9 @@
+:root {
+    /* --background-color: linear-gradient(to right, tomato, blue); */
+    --background-color: rgba(255, 99, 71, 0.8);
+    --background-color--original: rgba(255, 255, 255, 0.8);
+}
+
 .title-bar {
     color: black;
     display: flex;
@@ -5,10 +11,23 @@
     border-bottom: 1px solid;
 
     font-family: 'Lobster', cursive;
+
+    transition: 200ms ease;
 }
 
-.title-bar:hover {
-    color: tomato;
+.title-bar>h1 {
+    transition: 200ms ease;
+}
+
+.title-bar:hover{
+    color: var(--background-color);
+    /* background: var(--background-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.title-bar:hover>h1 {
+    scale: 1.1;
 }
 
 .title-bar>* {
@@ -36,7 +55,7 @@ a {
 
 .cards-wrapper>* {
     display: flex;
-    background-color: white;
+    background-color: var(--background-color--original);
     color: black;
 
     width: 100%;
@@ -51,6 +70,8 @@ a {
 
     animation-name: cards-slide-desktop;
     animation-duration: 2s;
+
+    transition: 200ms ease;
 }
 
 @keyframes cards-slide-desktop {
@@ -76,6 +97,7 @@ a {
 }
 
 .cards-wrapper>*:hover {
-    background-color: tomato;
+    scale: 1.05;
+    background: var(--background-color);
     cursor: pointer;
 }

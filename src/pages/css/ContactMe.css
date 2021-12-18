@@ -5,11 +5,25 @@
     border-bottom: 1px solid;
 
     font-family: 'Lobster', cursive;
+
+    transition: 200ms ease;
+}
+
+.title-bar__contact-me>h1 {
+    transition: 200ms ease;
 }
 
 .title-bar__contact-me:hover {
-    color: tomato;
+    color: var(--background-color);
+    /* background: var(--background-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
+
+.title-bar__contact-me:hover>h1 {
+    scale: 1.1;
+}
+
 
 .title-bar__contact-me>* {
     animation-name: title-slide;
@@ -36,7 +50,7 @@ a {
 
 .cards-wrapper__contact-me>* {
     display: flex;
-    background-color: white;
+    background-color: var(--background-color--original);
     color: black;
 
     width: 100%;
@@ -51,6 +65,8 @@ a {
 
     animation-name: cards-slide-desktop;
     animation-duration: 2s;
+
+    transition: 200ms ease;
 }
 
 .cards-wrapper__contact-me>*>* {
@@ -79,6 +95,7 @@ a {
 }
 
 .cards-wrapper__contact-me>*:hover {
-    background-color: tomato;
+    scale: 1.05;
+    background: var(--background-color);
     cursor: pointer;
 }
