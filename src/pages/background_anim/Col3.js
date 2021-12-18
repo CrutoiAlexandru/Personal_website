@@ -17,7 +17,7 @@ export default function Col3() {
         let min = 2;
 
         let opacity = Math.random();
-        let red = Math.random()*255;
+        let red = (Math.random() * (255 - 100) ) + 100;
         let rgb = `${red}, 20, 40`;
 
         let size = (Math.random() * (max - min) ) + min;
@@ -49,7 +49,7 @@ export default function Col3() {
         let min = 2;
         
         let opacity = Math.random();
-        let red = Math.random()*255;
+        let red = (Math.random() * (255 - 100) ) + 100;
         let rgb = `${red}, 20, 40`;
 
         let size = (Math.random() * (max - min) ) + min;

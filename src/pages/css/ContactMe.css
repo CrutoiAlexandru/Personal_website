@@ -70,6 +70,7 @@ a {
 }
 
 .cards-wrapper__contact-me>*>* {
+    margin: 5%;
     color: black;
 }
 
