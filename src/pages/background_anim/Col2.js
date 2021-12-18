@@ -19,13 +19,16 @@ export default function Col2() {
         let red = Math.random()*255;
         let rgb = `${red}, 20, 40`;
 
+        let size = (Math.random() * (max - min) ) + min;
+
         let right_place = (Math.random() * (700 - 300) ) + 300;
 
         r.style.setProperty('--right-place-2', '-' + right_place + '%');
         r.style.setProperty('--right-place-start-2', right_place + 120 + '%');
 
         let styles = {
-            width: (Math.random() * (max - min) ) + min + 'em',
+            width: size + 'em',
+            height: size + 'em',
             backgroundColor: `rgba(${rgb}, ${opacity})`
         }
 
@@ -48,13 +51,16 @@ export default function Col2() {
         let red = Math.random()*255;
         let rgb = `${red}, 20, 40`;
 
+        let size = (Math.random() * (max - min) ) + min;
+
         let left_place = (Math.random() * (700 - 300) ) + 300;
 
         r.style.setProperty('--left-place-2',  left_place + '%');
         r.style.setProperty('--left-place-start-2', '-' + left_place - 120 + '%');
 
         let styles = {
-            width: (Math.random() * (max - min) ) + min + 'em',
+            width: size + 'em',
+            height: size + 'em',
             backgroundColor: `rgba(${rgb}, ${opacity})`
         }
 
