@@ -26,7 +26,7 @@ export default function Col3() {
         r.style.setProperty('--right-place-start-3', right_place + 120 + '%');
 
         let styles = {
-            width: (Math.random() * (max - min) ) + min + '%',
+            width: (Math.random() * (max - min) ) + min + 'em',
             backgroundColor: `rgba(${rgb}, ${opacity})`
         }
 
@@ -55,7 +55,7 @@ export default function Col3() {
         r.style.setProperty('--left-place-start-3', '-' + left_place - 120 + '%');
 
         let styles = {
-            width: (Math.random() * (max - min) ) + min + '%',
+            width: (Math.random() * (max - min) ) + min + 'em',
             backgroundColor: `rgba(${rgb}, ${opacity})`
         }
 

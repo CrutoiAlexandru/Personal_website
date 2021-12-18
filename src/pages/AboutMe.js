@@ -7,31 +7,34 @@ import Col2 from "./background_anim/Col2.js"
 import Col3 from "./background_anim/Col3.js"
 
 export default function AboutMe() {
+    let r = document.querySelector(":root");
+    r.style.setProperty('--page-height', document.documentElement.scrollHeight + 'px');
+
     return (
         <>
         <Col1></Col1>
         <Col2></Col2>
         <Col3></Col3>
         <div className="title-bar__about-me">
-          <h1 >About me</h1>
+            <h1 >About me</h1>
         </div>
         <div className="cards-wrapper__about-me" >
             <div>
                 <p>Communism (from Latin communis, 'common, universal')[1][2] is a philosophical, social, political, and economic ideology and movement whose goal is the establishment of a communist society, namely a socioeconomic order structured upon the ideas of common ownership of the means of production and the absence of social classes, money,[3][4] and the state.[5][6] Communism is a specific, yet distinct, form of socialism. Communists agree on the withering away of the state but disagree on the means to this end, reflecting a distinction between a more libertarian approach of communization, revolutionary spontaneity, and workers' self-management, and a more vanguardist or Communist party-driven approach through the development of a constitutional socialist state.[7]
 
-Variants of communism have been developed throughout history, including anarcho-communism and Marxist schools of thought. Communism includes a variety of schools of thought which broadly include Marxism, Leninism, and libertarian communism as well as the political ideologies grouped around both, all of which share the analysis that the current order of society stems from capitalism, its economic system and mode of production, namely that in this system there are two major social classes, the relationship between these two classes is exploitative, and that this situation can only ultimately be resolved through a social revolution.[8][nb 1] The two classes are the proletariat (the working class), who make up the majority of the population within society and must work to survive, and the bourgeoisie (the capitalist class), a small minority who derives profit from employing the working class through private ownership of the means of production. According to this analysis, revolution would put the working class in power and in turn establish social ownership of the means of production which is the primary element in the transformation of society towards a communist mode of production.[8]
+    Variants of communism have been developed throughout history, including anarcho-communism and Marxist schools of thought. Communism includes a variety of schools of thought which broadly include Marxism, Leninism, and libertarian communism as well as the political ideologies grouped around both, all of which share the analysis that the current order of society stems from capitalism, its economic system and mode of production, namely that in this system there are two major social classes, the relationship between these two classes is exploitative, and that this situation can only ultimately be resolved through a social revolution.[8][nb 1] The two classes are the proletariat (the working class), who make up the majority of the population within society and must work to survive, and the bourgeoisie (the capitalist class), a small minority who derives profit from employing the working class through private ownership of the means of production. According to this analysis, revolution would put the working class in power and in turn establish social ownership of the means of production which is the primary element in the transformation of society towards a communist mode of production.[8]
 
-In the 20th century, Communist governments espousing Marxism–Leninism and its vari</p>
+    In the 20th century, Communist governments espousing Marxism–Leninism and its vari</p>
             </div>
             <div>
                 <p>Communism (from Latin communis, 'common, universal')[1][2] is a philosophical, social, political, and economic ideology and movement whose goal is the establishment of a communist society, namely a socioeconomic order structured upon the ideas of common ownership of the means of production and the absence of social classes, money,[3][4] and the state.[5][6] Communism is a specific, yet distinct, form of socialism. Communists agree on the withering away of the state but disagree on the means to this end, reflecting a distinction between a more libertarian approach of communization, revolutionary spontaneity, and workers' self-management, and a more vanguardist or Communist party-driven approach through the development of a constitutional socialist state.[7]
 
-Variants of communism have been developed throughout history</p>
+    Variants of communism have been developed throughout history</p>
             </div>
             <div>
                 <p>Communism (from Latin communis, 'common, universal')[1][2] is a philosophical, social, political, and economic ideology and movement whose goal is the establishment of a communist society, namely a socioeconomic order structured upon the ideas of common ownership of the means of production and the absence of social classes, money,[3][4] and the state.[5][6] Communism is a specific, yet distinct, form of socialism. Communists agree on the withering away of the state but disagree on the means to this end, reflecting a distinction between a more libertarian approach of communization, revolutionary spontaneity, and workers' self-management, and a more vanguardist or Communist party-driven approach through the development of a constitutional socialist state.[7]
 
-Variants of communism have been developed throughout history, including anarcho-communism and Marxist schools of thought. Communism includes a variety of schools of thought which broadly include Marxism, Leninism, and libertarian communism as well as the political ideologies grouped around both, all of which share the analysis that the current order of society stems from capitalism, its economic system and mode of production, namely that in this system there are two major social classes, the relationship between these two classes is exploitative, and that this situation can only ultimately be resolved through a social revolution.[8][nb 1] The two classes are the proletariat (the working class), who make up the majority of the population within society and must work to survive, and the bourgeoisie (the capitalist class), a small minority who derives profit from employing the working class through private ownership of the means of production. According to this analysis </p>
+    Variants of communism have been developed throughout history, including anarcho-communism and Marxist schools of thought. Communism includes a variety of schools of thought which broadly include Marxism, Leninism, and libertarian communism as well as the political ideologies grouped around both, all of which share the analysis that the current order of society stems from capitalism, its economic system and mode of production, namely that in this system there are two major social classes, the relationship between these two classes is exploitative, and that this situation can only ultimately be resolved through a social revolution.[8][nb 1] The two classes are the proletariat (the working class), who make up the majority of the population within society and must work to survive, and the bourgeoisie (the capitalist class), a small minority who derives profit from employing the working class through private ownership of the means of production. According to this analysis </p>
             </div>
         </div>
         </>

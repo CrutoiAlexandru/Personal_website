@@ -3,10 +3,12 @@
     --right-place-start: ;
     --left-place: ;
     --left-place-start: ;
+    --page-height: 100vh;
 }
 
-body {
+html,body {
     margin: 0;
+    max-height: 100%;
 }
 
 .blobs--right-wrapper {
@@ -18,10 +20,12 @@ body {
     top: 0;
 
     width: 100%;
-    height: 100%;
+    height: var(--page-height);
     margin: 0em;
     padding: 0em;
     z-index: -1;
+
+    position: fixed;
 
     overflow: hidden;
 }
@@ -53,10 +57,12 @@ body {
     top: 0;
 
     width: 100%;
-    height: 100%;
+    height: var(--page-height);
     margin: 0em;
     padding: 0em;
     z-index: -1;
+
+    position: fixed;
 
     overflow: hidden;
 }
@@ -73,8 +79,4 @@ body {
 @keyframes blobs--left-animation {
     from {transform: translateX(var(--left-place-start));}
     to {transform: translateX(var(--left-place));}
-}
-
-@keyframes loop {
-    0% {transform: translateX(calc(var(--left-place)));}
 }

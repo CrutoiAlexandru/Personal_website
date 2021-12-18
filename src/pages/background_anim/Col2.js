@@ -25,7 +25,7 @@ export default function Col2() {
         r.style.setProperty('--right-place-start-2', right_place + 120 + '%');
 
         let styles = {
-            width: (Math.random() * (max - min) ) + min + '%',
+            width: (Math.random() * (max - min) ) + min + 'em',
             backgroundColor: `rgba(${rgb}, ${opacity})`
         }
 
@@ -54,7 +54,7 @@ export default function Col2() {
         r.style.setProperty('--left-place-start-2', '-' + left_place - 120 + '%');
 
         let styles = {
-            width: (Math.random() * (max - min) ) + min + '%',
+            width: (Math.random() * (max - min) ) + min + 'em',
             backgroundColor: `rgba(${rgb}, ${opacity})`
         }
 
