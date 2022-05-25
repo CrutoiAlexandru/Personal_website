@@ -18,8 +18,8 @@
   justify-content: center;
   color: white;
 
-  margin-left: 30%;
-  width: 150%;
+  padding-left: 50%;
+  margin-right: 5%;
   align-items: center;
 
   font-size: 150%;
@@ -28,8 +28,9 @@
 .home__top_bar__buttons {
   display: flex;
   align-items: center;
+  margin-right: 2.5%;
   color: grey;
-  width: 100%;
+  width: 120%;
 }
 
 .home__top_bar__buttons--each {
@@ -53,6 +54,10 @@
   .home__top_bar__title {
     margin-left: 0%;
     margin-bottom: 5%;
+
+    padding-left: 0%;
+    margin-right: 0%;
+
     width: 100%;
   }
 
