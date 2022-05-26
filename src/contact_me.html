@@ -6,35 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My website</title>
 
-    <link rel="stylesheet" href="css/home__top_bar.css" />
-    <link rel="stylesheet" href="css/home__body.css" />
+    <link rel="stylesheet" href="css/top_bar.css" />
+    <link rel="stylesheet" href="css/contact_me__body.css" />
 
     <script src="js/page_check.js" defer></script>
+    <script src="js/send_email.js"></script>
   </head>
 
   <body>
     <div class="background_image"></div>
 
-    <div class="home__top_bar">
-      <div class="home__top_bar__title">
+    <div class="top_bar">
+      <div class="top_bar__title">
         <h1>Title</h1>
       </div>
 
-      <div class="home__top_bar__buttons">
+      <div class="top_bar__buttons">
         <h2
-          class="home__top_bar__buttons--each"
+          class="top_bar__buttons--each"
           onclick="window.location.assign('index.html')"
         >
           Home
         </h2>
         <h2
-          class="home__top_bar__buttons--each"
+          class="top_bar__buttons--each"
           onclick="window.location.assign('about_me.html')"
         >
           About me
         </h2>
         <h2
-          class="home__top_bar__buttons--each"
+          class="top_bar__buttons--each"
           onclick="window.location.assign('contact_me.html')"
         >
           Contact me
@@ -43,34 +44,78 @@
     </div>
 
     <div class="home__body">
-      <img
-        src="../res/stock_photo__profile.jpeg"
-        class="home__body--image"
-        alt="Profile photo"
-      />
+      <div style="height: 100vh">
+        <form>
+          <div class="contact_me__body__form--wrapper">
+            <h1 style="margin-bottom: 2%; margin-top: 10%">Contact me here</h1>
 
-      <div class="home__body--panel">
-        <div class="home__body--panel--item--wrapper">
-          <div class="home__body--panel--item">
-            <h1>Title1</h1>
+            <div id="name_mail_div">
+              <div style="display: flex">
+                <h3>Name</h3>
+                <input
+                  id="input_name"
+                  type="text"
+                  style="margin-inline: 2%; margin-bottom: 2%"
+                />
+              </div>
+
+              <div style="display: flex">
+                <h3>Mail</h3>
+                <input
+                  id="input_email"
+                  type="text"
+                  style="margin-inline: 2%; margin-bottom: 2%"
+                />
+              </div>
+            </div>
+
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 2%;
+              "
+            >
+              <h3>Subject</h3>
+              <input
+                id="input_subject"
+                type="text"
+                style="width: 60%; margin-inline: 2%"
+              />
+            </div>
+
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 10%;
+              "
+            >
+              <h3>Message</h3>
+              <textarea
+                id="input_message"
+                type="text"
+                style="
+                  width: 60%;
+                  height: 20vh;
+                  margin-inline: 2%;
+                  resize: none;
+                "
+              ></textarea>
+            </div>
+
+            <button
+              onclick="sendEmail()"
+              onmousedown="this.style.background='rgba(255,255,255,0.9)';this.style.color='black'"
+              onmouseup="
+            this.style.background='rgba(255,255,255,0.2)';this.style.color='grey'"
+            >
+              Send
+            </button>
           </div>
-        </div>
-
-        <div style="height: 15px"></div>
-
-        <div class="home__body--panel--item--wrapper">
-          <div class="home__body--panel--item">
-            <h1>Title2</h1>
-          </div>
-        </div>
-
-        <div style="height: 15px"></div>
-
-        <div class="home__body--panel--item--wrapper">
-          <div class="home__body--panel--item">
-            <h1>Title3</h1>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   </body>

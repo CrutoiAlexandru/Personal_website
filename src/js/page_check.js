@@ -1,4 +1,4 @@
-let el = document.getElementsByClassName("home__top_bar__buttons--each");
+let el = document.getElementsByClassName("top_bar__buttons--each");
 
 var path = window.location.pathname;
 var page = path.split("/").pop();

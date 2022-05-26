@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
 .background_image {
   position: fixed;
   z-index: -1;
@@ -12,7 +18,7 @@
   height: 100%;
   width: 100%;
 
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .home__body--image {
@@ -59,6 +65,6 @@
   }
 
   .home__body--panel--item--wrapper {
-    height: 10em;
+    height: 25vh;
   }
 }
